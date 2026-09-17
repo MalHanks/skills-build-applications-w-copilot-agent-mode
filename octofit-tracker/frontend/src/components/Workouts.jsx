@@ -4,7 +4,7 @@ function Workouts() {
   return (
     <DataPage
       title="Workouts"
-      resource="workouts"
+      endpointPath="/api/workouts/"
       columns={[
         { key: 'name', label: 'Workout', render: (workout) => workout.name },
         { key: 'difficulty', label: 'Difficulty', render: (workout) => workout.difficulty },

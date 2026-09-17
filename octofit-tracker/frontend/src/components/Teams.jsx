@@ -4,7 +4,7 @@ function Teams() {
   return (
     <DataPage
       title="Teams"
-      resource="teams"
+      endpointPath="/api/teams/"
       columns={[
         { key: 'name', label: 'Team', render: (team) => team.name },
         { key: 'mascot', label: 'Mascot', render: (team) => team.mascot || 'Pending' },

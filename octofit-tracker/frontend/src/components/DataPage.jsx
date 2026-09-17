@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { endpointUrl, normalizeCollection } from '../api'
 
-function DataPage({ columns, resource, title }) {
+function DataPage({ columns, endpointPath, title }) {
   const [items, setItems] = useState([])
   const [status, setStatus] = useState('loading')
   const [error, setError] = useState('')
-  const url = endpointUrl(resource)
+  const url = endpointUrl(endpointPath)
 
   useEffect(() => {
     const controller = new AbortController()

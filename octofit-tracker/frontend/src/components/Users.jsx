@@ -4,7 +4,7 @@ function Users() {
   return (
     <DataPage
       title="Users"
-      resource="users"
+      endpointPath="/api/users/"
       columns={[
         { key: 'displayName', label: 'Name', render: (user) => user.displayName },
         { key: 'username', label: 'Username', render: (user) => user.username },

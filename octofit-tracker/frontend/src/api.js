@@ -1,11 +1,11 @@
 const codespaceName = import.meta.env.VITE_CODESPACE_NAME
 
 export const apiBaseUrl = codespaceName
-  ? `https://${codespaceName}-8000.app.github.dev/api`
-  : 'http://localhost:8000/api'
+  ? `https://${codespaceName}-8000.app.github.dev`
+  : 'http://localhost:8000'
 
-export function endpointUrl(resource) {
-  return `${apiBaseUrl}/${resource}/`
+export function endpointUrl(endpointPath) {
+  return `${apiBaseUrl}${endpointPath}`
 }
 
 export function normalizeCollection(payload) {

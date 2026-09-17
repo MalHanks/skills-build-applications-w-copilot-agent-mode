@@ -4,7 +4,7 @@ function Activities() {
   return (
     <DataPage
       title="Activities"
-      resource="activities"
+      endpointPath="/api/activities/"
       columns={[
         { key: 'type', label: 'Activity', render: (activity) => activity.type },
         {

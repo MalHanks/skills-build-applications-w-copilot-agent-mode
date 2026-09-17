@@ -4,7 +4,7 @@ function Leaderboard() {
   return (
     <DataPage
       title="Leaderboard"
-      resource="leaderboard"
+      endpointPath="/api/leaderboard/"
       columns={[
         {
           key: 'points',
