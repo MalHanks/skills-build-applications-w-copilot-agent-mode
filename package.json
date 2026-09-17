@@ -1,0 +1,17 @@
+{
+  "name": "skills-build-applications-w-copilot-agent-mode",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "octofit-tracker/backend",
+    "octofit-tracker/frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c green,blue \"npm run dev --prefix octofit-tracker/backend\" \"VITE_CODESPACE_NAME=$CODESPACE_NAME npm run dev --prefix octofit-tracker/frontend -- --host 0.0.0.0\"",
+    "build": "npm run build --prefix octofit-tracker/backend && npm run build --prefix octofit-tracker/frontend",
+    "seed": "npm run seed --prefix octofit-tracker/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
