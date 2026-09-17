@@ -1,4 +1,6 @@
-const codespaceName = import.meta.env.VITE_CODESPACE_NAME
+const codespaceName =
+  import.meta.env.VITE_CODESPACE_NAME ||
+  window.location.hostname.match(/^(.+)-5173\.app\.github\.dev$/)?.[1]
 
 export const apiBaseUrl = codespaceName
   ? `https://${codespaceName}-8000.app.github.dev`

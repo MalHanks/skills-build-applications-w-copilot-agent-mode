@@ -17,3 +17,4 @@ https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/[componen
 ```
 
 If it is unset, the app safely falls back to `http://localhost:8000/api`.
+When the app is opened from a Codespaces `5173.app.github.dev` URL, it can also infer the matching `8000.app.github.dev` API URL from the browser hostname.
